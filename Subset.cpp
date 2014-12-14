@@ -3,7 +3,7 @@
 // FILE:     Subset.cpp
 // ROLE:     TODO (some explanation)
 // CREATED:  2014-12-13 00:19:39
-// MODIFIED: 2014-12-13 00:35:29
+// MODIFIED: 2014-12-13 22:32:23
 #include <iostream>
 using namespace std;
 //note: no-descending order--->> sort first, and select not to include the element first
@@ -23,7 +23,7 @@ class Solution {
         }
 
         void insert(vector<vector<int> >&v, int index, int length, vector<int> temp, vector<int> &S) {
-            if (index == length - 1) {
+            if (index == length) {
                v.push_back(temp);
             } else {
                insert(v, index + 1, length, temp, S);
