@@ -3,7 +3,7 @@
 // FILE:     Subset.cpp
 // ROLE:     TODO (some explanation)
 // CREATED:  2014-12-13 00:19:39
-// MODIFIED: 2014-12-13 22:32:23
+// MODIFIED: 2015-01-05 16:26:03
 #include <iostream>
 using namespace std;
 //note: no-descending order--->> sort first, and select not to include the element first
