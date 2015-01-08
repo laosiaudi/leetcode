@@ -3,8 +3,9 @@
 // FILE:     Find_Peak_Element.cpp
 // 2014 @laosiaudi All rights reserved
 // CREATED:  2015-01-05 16:15:40
-// MODIFIED: 2015-01-05 16:32:02
+// MODIFIED: 2015-01-08 20:25:55
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution {
