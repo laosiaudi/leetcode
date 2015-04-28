@@ -3,7 +3,7 @@
 // FILE:     Remove_Duplicates_From_Sorted_List.cpp
 // 2014 @laosiaudi All rights reserved
 // CREATED:  2015-04-27 12:45:01
-// MODIFIED: 2015-04-27 12:46:14
+// MODIFIED: 2015-04-28 13:09:13
 #include <iostream>
 using namespace std;
 
@@ -18,7 +18,7 @@ using namespace std;
  */
 class Solution {
     public:
-        ListNode* removeElements(ListNode* head) {
+        ListNode* deleteDuplicates(ListNode* head) {
             if (head == NULL)
                 return head;
 
