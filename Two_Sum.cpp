@@ -48,6 +48,55 @@ class Solution {
     }
 };
 
+class BetterSolution {
+    public:
+        struct node {
+            int val;
+            int index;
+            bool operator < (const struct node & item) {
+                return val < item.val;
+            }
+        };
+        vector<int> twoSum(vector<int>& nums, int target) {
+            int size = nums.size();
+            vector<int>v;
+            vector<struct node>new_nums;
+            if (size < 2)
+                return v;
+            for (int i = 0; i < nums.size(); i ++) {
+                struct node item;
+                item.val = nums[i];
+                item.index = i + 1;
+                new_nums.push_back(item);
+            }
+
+            sort(new_nums.begin(), new_nums.end());
+            int begin = 0;
+            int end = size - 1;
+            while (begin < end) {
+                int sum = new_nums[begin].val + new_nums[end].val;
+                if (sum == target) {
+                    if (new_nums[begin].index > new_nums[end].index) {
+                        v.push_back(new_nums[end].index);
+                        v.push_back(new_nums[begin].index);
+                    } else {
+                        v.push_back(new_nums[begin].index);
+                        v.push_back(new_nums[end].index);
+                    }
+                    return v;
+                } else if (sum > target) {
+                    end --;
+                } else {
+                    begin ++;
+                }
+            }
+            return v;
+        }
+};
+
+
+
+
 int main() {
     vector<int>v;
     v.push_back(-1);
