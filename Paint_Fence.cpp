@@ -2,11 +2,14 @@
 *     File Name           :     Paint_Fence.cpp
 *     Created By          :     laosiaudi
 *     Creation Date       :     [2015-10-22 16:24]
-*     Last Modified       :     [2015-10-22 16:38]
+*     Last Modified       :     [2015-10-25 17:52]
 *     Description         :
 **********************************************************************************/
 //google
 #include <vector>
+#include <iostream>
+
+using namespace std;
 class Solution {
     public:
         int numWays(int n, int k) {
@@ -23,6 +26,12 @@ class Solution {
             }
             return d + s;
         }
+};
+
+int main() {
+    Solution s;
+    for (int i = 1; i <= 20; i ++)
+        cout << s.numWays(i, 2) << endl;
 }
 
 
