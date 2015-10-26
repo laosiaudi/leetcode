@@ -36,3 +36,26 @@ public:
         recursiveTraversal(v,root->right);
     }
 };
+
+//iterative version
+class Solution {
+    public:
+        vector<int> inorderTraversal(TreeNode *root) {
+            vector<int>result;
+            stack<TreeNode*>s;
+            if (root == NULL)
+                return result;
+            TreeNode* tmp = root;
+            while (s.size() > 0 || tmp != NULL) {
+                while (tmp != NULL) {
+                    s.push(tmp);
+                    tmp = tmp->left;
+                }
+                tmp = s.top();
+                result.push_back(tmp->val);
+                s.pop();
+                tmp = tmp->right;
+            }
+            return result;
+        }
+};
