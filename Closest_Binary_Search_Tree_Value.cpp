@@ -2,7 +2,7 @@
 *     File Name           :     Closest_Binary_Search_Tree_Value.cpp
 *     Created By          :     laosiaudi
 *     Creation Date       :     [2015-10-25 14:56]
-*     Last Modified       :     [2015-10-25 15:27]
+*     Last Modified       :     [2015-10-25 23:26]
 *     Description         :
 **********************************************************************************/
 
@@ -32,6 +32,6 @@ class Solution {
             else if (target > root->val)
                 recursiveFind(root->right, target, minValue);
         }
-}
+};
 
 
