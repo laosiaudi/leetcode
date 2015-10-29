@@ -39,7 +39,7 @@ class Solution {
             }
             return s.substr(start, end - start + 1);
         }
-};
+}; 
 
 int main() {
     Solution s;
